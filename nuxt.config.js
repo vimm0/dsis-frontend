@@ -9,32 +9,31 @@ module.exports = {
   head: {
     title: pkg.name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: pkg.description}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {color: '#fff'},
 
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // '~/plugins/axios'
   ],
-
   /*
   ** Nuxt.js modules
   */
@@ -49,17 +48,28 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-  },
+    baseURL: 'http://localhost:8000/',
+    // credentials: true,
+    // proxy: false,
+    // debug: true,
+    // retry: {
+    //   retries: 3
+    // },
+    // requestInterceptor: (config, {store}) => {
+    //   config.headers.common['Authorization'] = '';
+    //   config.headers.common['Content-Type'] = 'application/x-www-form-urlencoded;application/json';
+    //   return config
+    },
 
-  /*
-  ** Build configuration
-  */
-  build: {
     /*
-    ** You can extend webpack config here
+    ** Build configuration
     */
-    extend(config, ctx) {
-      
+    build: {
+      /*
+      ** You can extend webpack config here
+      */
+      extend(config, ctx) {
+
+      }
     }
   }
-}
