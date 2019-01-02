@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <div class="footer-copyright text-center py-3">© {{new Date().getFullYear()}} Copyright
-      <a href="https://www.nepexgroup.com" class="company"> nepexgroup.com</a>
+    <div class="footer-copyright text-center py-3">Copyright © {{new Date().getFullYear()}}
+      <a href="https://www.nepexgroup.com" class="company">Nepex Group</a>
     </div>
   </footer>
 </template>

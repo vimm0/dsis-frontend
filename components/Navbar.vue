@@ -8,23 +8,23 @@
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>
-        <b-nav-item>
-          <nuxt-link class="custom-nav" to="/">Home</nuxt-link>
+        <b-nav-item class="custom-nav" href="/">
+          Home
         </b-nav-item>
-        <b-nav-item>
-          <nuxt-link class="custom-nav" to="/teachers">Teachers</nuxt-link>
+        <b-nav-item class="custom-nav" href="/teachers">
+          Teachers
         </b-nav-item>
-        <b-nav-item>
-          <nuxt-link class="custom-nav" to="/students">Students</nuxt-link>
+        <b-nav-item class="custom-nav" href="/students">
+          Students
         </b-nav-item>
-        <b-nav-item href="#">
-          <nuxt-link class="custom-nav" to="/levels">Level</nuxt-link>
+        <b-nav-item class="custom-nav" href="/levels">
+          Levels
         </b-nav-item>
-        <b-nav-item href="#">
-          <nuxt-link class="custom-nav" to="/subjects">Subjects</nuxt-link>
+        <b-nav-item class="custom-nav" href="/subjects">
+          Subjects
         </b-nav-item>
-        <b-nav-item href="#">
-          <nuxt-link class="custom-nav" to="/exams">Exams</nuxt-link>
+        <b-nav-item class="custom-nav" href="/exams">
+          Exams
         </b-nav-item>
       </b-navbar-nav>
 
