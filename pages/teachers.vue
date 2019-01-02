@@ -45,10 +45,5 @@
 </script>
 
 <style>
-  .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
-    border: 1px solid #eceef1;
-  }
+
 </style>

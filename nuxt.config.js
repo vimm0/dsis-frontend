@@ -21,7 +21,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: {color: '#ff0002'},
+  loading: {color: '#00c292'},
 
   /*
   ** Global CSS
@@ -59,17 +59,17 @@ module.exports = {
     //   config.headers.common['Authorization'] = '';
     //   config.headers.common['Content-Type'] = 'application/x-www-form-urlencoded;application/json';
     //   return config
-    },
+  },
 
+  /*
+  ** Build configuration
+  */
+  build: {
     /*
-    ** Build configuration
+    ** You can extend webpack config here
     */
-    build: {
-      /*
-      ** You can extend webpack config here
-      */
-      extend(config, ctx) {
+    extend(config, ctx) {
 
-      }
     }
   }
+}

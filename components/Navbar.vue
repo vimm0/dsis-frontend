@@ -8,22 +8,22 @@
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>
-        <b-nav-item class="custom-nav" href="/">
+        <b-nav-item class="custom-nav" to="/">
           Home
         </b-nav-item>
-        <b-nav-item class="custom-nav" href="/teachers">
+        <b-nav-item class="custom-nav" to="/teachers">
           Teachers
         </b-nav-item>
-        <b-nav-item class="custom-nav" href="/students">
+        <b-nav-item class="custom-nav" to="/students">
           Students
         </b-nav-item>
-        <b-nav-item class="custom-nav" href="/levels">
+        <b-nav-item class="custom-nav" to="/levels">
           Levels
         </b-nav-item>
-        <b-nav-item class="custom-nav" href="/subjects">
+        <b-nav-item class="custom-nav" to="/subjects">
           Subjects
         </b-nav-item>
-        <b-nav-item class="custom-nav" href="/exams">
+        <b-nav-item class="custom-nav" to="/exams">
           Exams
         </b-nav-item>
       </b-navbar-nav>
