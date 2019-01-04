@@ -137,6 +137,38 @@ module.exports = {
       {rel: "stylesheet", href: '/css/responsive.css'},
       {rel: "stylesheet", href: '/js/vendor/modernizr-2.8.3.min.js'},
     ],
+    script: [
+      //https://stackoverflow.com/questions/50138074/how-to-append-js-files-in-nuxt-before-body-ends
+      {src: '/js/vendor/jquery-1.12.4.min.js', body: true},
+      {src: '/js/bootstrap.min.js', body: true},
+      {src: '/js/wow.min.js', body: true},
+      {src: '/js/jquery-price-slider.js', body: true},
+      {src: '/js/owl.carousel.min.js', body: true},
+      {src: '/js/jquery.scrollUp.min.js', body: true},
+      {src: '/js/meanmenu/jquery.meanmenu.js', body: true},
+      {src: '/js/counterup/jquery.counterup.min.js', body: true},
+      {src: '/js/counterup/waypoints.min.js', body: true},
+      {src: '/js/counterup/counterup-active.js', body: true},
+      {src: '/js/scrollbar/jquery.mCustomScrollbar.concat.min.js', body: true},
+      {src: '/js/sparkline/jquery.sparkline.min.js', body: true},
+      {src: '/js/sparkline/sparkline-active.js', body: true},
+      {src: '/js/flot/jquery.flot.js', body: true},
+      {src: '/js/flot/jquery.flot.resize.js', body: true},
+      {src: '/js/flot/flot-active.js', body: true},
+      {src: '/js/knob/jquery.knob.js', body: true},
+      {src: '/js/knob/jquery.appear.js', body: true},
+      {src: '/js/knob/knob-active.js', body: true},
+      {src: '/js/chat/jquery.chat.js', body: true},
+      {src: '/js/todo/jquery.todo.js', body: true},
+      {src: '/js/wave/waves.min.js', body: true},
+      {src: '/js/wave/wave-active.js', body: true},
+      {src: '/js/plugins.js', body: true},
+      {src: '/js/data-table/jquery.dataTables.min.js', body: true},
+      {src: '/js/data-table/data-table-act.js', body: true},
+      {src: '/js/main.js', body: true},
+      {src: '/js/tawk-chat.js', body: true},
+      // { src: '/defer.js', defer: '' }
+    ]
   },
 
   /*
