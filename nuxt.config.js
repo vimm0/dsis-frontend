@@ -2,7 +2,6 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -14,8 +13,130 @@ module.exports = {
       {hid: 'description', name: 'description', content: pkg.description}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
-    ]
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {
+        rel: 'preload',
+        href: '/css/font-awesome.min.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/bootstrap.min.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/owl.carousel.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/owl.theme.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/owl.transitions.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/meanmenu/meanmenu.min.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/animate.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/normalize.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/wave/waves.min.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/wave/button.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/scrollbar/jquery.mCustomScrollbar.min.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/notika-custom-icon.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/jquery.dataTables.min.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/main.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/style.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/css/responsive.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
+      {
+        rel: 'preload',
+        href: '/js/vendor/modernizr-2.8.3.min.js',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
+      }
+    ],
+    noscript: [
+      {rel: "stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900'},
+      {rel: "stylesheet", href: '/css/bootstrap.min.css'},
+      {rel: "stylesheet", href: '/css/font-awesome.min.css'},
+      {rel: "stylesheet", href: '/css/owl.carousel.css'},
+      {rel: "stylesheet", href: '/css/owl.theme.css'},
+      {rel: "stylesheet", href: '/css/owl.transitions.css'},
+      {rel: "stylesheet", href: '/css/meanmenu/meanmenu.min.css'},
+      {rel: "stylesheet", href: '/css/animate.css'},
+      {rel: "stylesheet", href: '/css/normalize.css'},
+      {rel: "stylesheet", href: '/css/wave/waves.min.css'},
+      {rel: "stylesheet", href: '/css/wave/button.css'},
+      {rel: "stylesheet", href: '/css/scrollbar/jquery.mCustomScrollbar.min.css'},
+      {rel: "stylesheet", href: '/css/notika-custom-icon.css'},
+      {rel: "stylesheet", href: '/css/jquery.dataTables.min.css'},
+      {rel: "stylesheet", href: '/css/main.css'},
+      {rel: "stylesheet", href: '/style.css'},
+      {rel: "stylesheet", href: '/css/responsive.css'},
+      {rel: "stylesheet", href: '/js/vendor/modernizr-2.8.3.min.js'},
+    ],
   },
 
   /*

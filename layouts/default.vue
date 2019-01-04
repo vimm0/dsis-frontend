@@ -3,6 +3,34 @@
     <nav-bar></nav-bar>
     <nuxt/>
     <foot-er></foot-er>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery-price-slider.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/meanmenu/jquery.meanmenu.js"></script>
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <script src="js/knob/jquery.knob.js"></script>
+    <script src="js/knob/jquery.appear.js"></script>
+    <script src="js/knob/knob-active.js"></script>
+    <script src="js/chat/jquery.chat.js"></script>
+    <script src="js/todo/jquery.todo.js"></script>
+    <script src="js/wave/waves.min.js"></script>
+    <script src="js/wave/wave-active.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/data-table/jquery.dataTables.min.js"></script>
+    <script src="js/data-table/data-table-act.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tawk-chat.js"></script>
   </div>
 </template>
 <script>
@@ -17,47 +45,47 @@
   }
 </script>
 <style>
-  html {
-    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    word-spacing: 1px;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-  }
+  /*html {*/
+  /*font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',*/
+  /*Roboto, 'Helvetica Neue', Arial, sans-serif;*/
+  /*font-size: 16px;*/
+  /*word-spacing: 1px;*/
+  /*-ms-text-size-adjust: 100%;*/
+  /*-webkit-text-size-adjust: 100%;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*box-sizing: border-box;*/
+  /*}*/
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    margin: 0;
-  }
+  /**,*/
+  /**:before,*/
+  /**:after {*/
+  /*box-sizing: border-box;*/
+  /*margin: 0;*/
+  /*}*/
 
-  .bg-info {
-    background-color: #00c292 !important;
-  }
+  /*.bg-info {*/
+  /*background-color: #00c292 !important;*/
+  /*}*/
 
-  a.navbar-brand {
-    color: rgba(255, 255, 255, 0.96) !important;
-  }
+  /*a.navbar-brand {*/
+  /*color: rgba(255, 255, 255, 0.96) !important;*/
+  /*}*/
 
-  a:hover {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none !important;
-  }
+  /*a:hover {*/
+  /*color: rgba(255, 255, 255, 0.75);*/
+  /*text-decoration: none !important;*/
+  /*}*/
 
-  .custom-nav {
-    color: rgba(255, 255, 255, 0.96);
-    background-color: transparent;
-  }
+  /*.custom-nav {*/
+  /*color: rgba(255, 255, 255, 0.96);*/
+  /*background-color: transparent;*/
+  /*}*/
 
-  .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
-    border: 1px solid #eceef1;
-  }
+  /*.table {*/
+  /*width: 100%;*/
+  /*margin-bottom: 1rem;*/
+  /*background-color: transparent;*/
+  /*border: 1px solid #eceef1;*/
+  /*}*/
 </style>
