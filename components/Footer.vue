@@ -20,10 +20,18 @@
   }
 
   .footer {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
+    text-align: center;
+  }
+
+  .footer-copyright-area p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 !important;
     text-align: center;
   }
 </style>

@@ -1,115 +1,259 @@
 <template>
   <div>
-    <div class="mobile-menu-area">
+    <div class="breadcomb-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="mobile-menu">
-              <nav id="dropdown">
-                <ul class="mobile-menu-nav">
-                  <li><a data-toggle="collapse" data-target="#Charts" href="#">Home</a>
-                    <ul class="collapse dropdown-header-top">
-                      <li><a href="index.html">Dashboard One</a></li>
-                      <li><a href="index-2.html">Dashboard Two</a></li>
-                      <li><a href="index-3.html">Dashboard Three</a></li>
-                      <li><a href="index-4.html">Dashboard Four</a></li>
-                      <li><a href="analytics.html">Analytics</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#demoevent" href="#">Email</a>
-                    <ul id="demoevent" class="collapse dropdown-header-top">
-                      <li><a href="inbox.html">Inbox</a></li>
-                      <li><a href="view-email.html">View Email</a></li>
-                      <li><a href="compose-email.html">Compose Email</a></li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#democrou" href="#">Interface</a>
-                    <ul id="democrou" class="collapse dropdown-header-top">
-                      <li><a href="animations.html">Animations</a></li>
-                      <li><a href="google-map.html">Google Map</a></li>
-                      <li><a href="data-map.html">Data Maps</a></li>
-                      <li><a href="code-editor.html">Code Editor</a></li>
-                      <li><a href="image-cropper.html">Images Cropper</a></li>
-                      <li><a href="wizard.html">Wizard</a></li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#demolibra" href="#">Charts</a>
-                    <ul id="demolibra" class="collapse dropdown-header-top">
-                      <li><a href="flot-charts.html">Flot Charts</a></li>
-                      <li><a href="bar-charts.html">Bar Charts</a></li>
-                      <li><a href="line-charts.html">Line Charts</a></li>
-                      <li><a href="area-charts.html">Area Charts</a></li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#demodepart" href="#">Tables</a>
-                    <ul id="demodepart" class="collapse dropdown-header-top">
-                      <li><a href="normal-table.html">Normal Table</a></li>
-                      <li><a href="data-table.html">Data Table</a></li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#demo" href="#">Forms</a>
-                    <ul id="demo" class="collapse dropdown-header-top">
-                      <li><a href="form-elements.html">Form Elements</a></li>
-                      <li><a href="form-components.html">Form Components</a></li>
-                      <li><a href="form-examples.html">Form Examples</a></li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">App views</a>
-                    <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-                      <li><a href="notification.html">Notifications</a>
-                      </li>
-                      <li><a href="alert.html">Alerts</a>
-                      </li>
-                      <li><a href="modals.html">Modals</a>
-                      </li>
-                      <li><a href="buttons.html">Buttons</a>
-                      </li>
-                      <li><a href="tabs.html">Tabs</a>
-                      </li>
-                      <li><a href="accordion.html">Accordion</a>
-                      </li>
-                      <li><a href="dialog.html">Dialogs</a>
-                      </li>
-                      <li><a href="popovers.html">Popovers</a>
-                      </li>
-                      <li><a href="tooltips.html">Tooltips</a>
-                      </li>
-                      <li><a href="dropdown.html">Dropdowns</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Pages</a>
-                    <ul id="Pagemob" class="collapse dropdown-header-top">
-                      <li><a href="contact.html">Contact</a>
-                      </li>
-                      <li><a href="invoice.html">Invoice</a>
-                      </li>
-                      <li><a href="typography.html">Typography</a>
-                      </li>
-                      <li><a href="color.html">Color</a>
-                      </li>
-                      <li><a href="login-register.html">Login Register</a>
-                      </li>
-                      <li><a href="404.html">404 Page</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
+            <div class="breadcomb-list">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div class="breadcomb-wp">
+                    <div class="breadcomb-icon">
+                      <i class="notika-icon notika-house"></i>
+                    </div>
+                    <div class="breadcomb-ctn">
+                      <h2>Home</h2>
+                      {{greeting()}} Sandesh Rana
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">-->
+                  <!--<div class="breadcomb-report">-->
+                    <!--<button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i-->
+                      <!--class="notika-icon notika-sent"></i></button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
+    <!--<div class="visitor-sv-tm-area">-->
+      <!--<div class="container">-->
+        <!--<div class="row">-->
+          <!--<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">-->
+            <!--<div class="visitor-sv-tm-int">-->
+              <!--<div class="contact-hd mg-bt-ant-inner">-->
+                <!--<h2>Visits by Server Time</h2>-->
+                <!--<p>Fusce eget dolor id justo luctus commodo vel pharetra nisi. Donec velit libero</p>-->
+              <!--</div>-->
+              <!--<no-ssr>-->
+                <!--<div class="visitor-sv-tm-ch">-->
+                  <!--<div id="visit-server-time" class="flot-chart"></div>-->
+                <!--</div>-->
+              <!--</no-ssr>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">-->
+            <!--<div class="visitor-sv-tm-int sm-res-mg-t-30">-->
+              <!--<div class="contact-hd mg-bt-ant-inner server-sts-rgt">-->
+                <!--<h2>Server Status</h2>-->
+                <!--<p>Fusce eget dolor id justo luctus commodo vel pharetra nisi. Donec velit libero</p>-->
+              <!--</div>-->
+              <!--<no-ssr>-->
+                <!--<div class="visitor-st-ch">-->
+                  <!--<div id="dynamic-chart" class="flot-chart widget-dynamic-chart ant-ctn-dyn"></div>-->
+                <!--</div>-->
+              <!--</no-ssr>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">-->
+            <!--<div class="visitor-sv-tm-int sm-res-mg-t-30 tb-res-mg-t-30 tb-res-ds-n dk-res-ds">-->
+              <!--<div class="contact-hd mg-bt-ant-inner">-->
+                <!--<h2>Visits Over Time</h2>-->
+                <!--<p>Fusce eget dolor id justo luctus commodo vel pharetra nisi. Donec velit libero</p>-->
+              <!--</div>-->
+              <!--<no-ssr>-->
+                <!--<div class="visitor-st-ch visitor-ov-ct">-->
+                  <!--<div id="visit-over-time" class="flot-chart"></div>-->
+                  <!--<div class="flc-visits"></div>-->
+                <!--</div>-->
+              <!--</no-ssr>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <div class="search-engine-area mg-t-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="search-engine-int">
+              <div class="contact-hd search-hd-eg">
+                <h2>Attendance</h2>
+                <p>Fusce eget dolor id justo luctus commodo vel pharetra nisi. Donec velit libero</p>
+              </div>
+              <div class="search-eg-table">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>Search Engine</th>
+                    <th class="text-right">Visitors</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><img class="search-engine-img" src="img/search-engines/google.png" alt="">Google</td>
+                    <td class="text-right">3831 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td><img class="search-engine-img" src="img/search-engines/bing.png" alt="">Bing</td>
+                    <td class="text-right">2123 <i class="notika-icon notika-down-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td><img class="search-engine-img" src="img/search-engines/baidu.png" alt="">Baidu</td>
+                    <td class="text-right">4375 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td><img class="search-engine-img" src="img/search-engines/yahoo.png" alt="">Yahoo</td>
+                    <td class="text-right">4020 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td><img class="search-engine-img" src="img/search-engines/duckduckgo.png" alt="">DuckDuckGo</td>
+                    <td class="text-right">2064 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="analysis-rd-mg"><img class="search-engine-img" src="img/search-engines/yandex.png"
+                                                    alt="">Yandex
+                    </td>
+                    <td class="text-right analysis-rd-mg">936 <i class="notika-icon notika-down-arrow"></i></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="search-engine-int sm-res-mg-t-30 tb-res-mg-t-30 tb-res-mg-t-0">
+              <div class="contact-hd search-hd-eg">
+                <h2>Referrer Websites</h2>
+                <p>Fusce eget dolor id justo luctus commodo vel pharetra nisi. Donec velit libero</p>
+              </div>
+              <div class="search-eg-table">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>Website</th>
+                    <th class="text-right">Visitors</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>themeforest.net</td>
+                    <td class="text-right">620 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td>codecanyon.net</td>
+                    <td class="text-right">432 <i class="notika-icon notika-down-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td>google.com</td>
+                    <td class="text-right">8702 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td>yahoo.com</td>
+                    <td class="text-right">683 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td>youtube.com</td>
+                    <td class="text-right">253 <i class="notika-icon notika-down-arrow"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="analysis-rd-mg">bing.com</td>
+                    <td class="text-right analysis-rd-mg">3018 <i class="notika-icon notika-up-arrow"></i></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="search-engine-int sm-res-mg-t-30 tb-res-mg-t-30 tb-res-ds-n dk-res-ds">
+              <div class="contact-hd search-hd-eg">
+                <h2>Site Performance</h2>
+                <p>Fusce eget dolor id justo luctus commodo vel pharetra nisi. Donec velit libero</p>
+              </div>
+              <div class="search-eg-table">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>Work Flow</th>
+                    <th class="text-right">Counter</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>External Backlinks</td>
+                    <td class="text-right">
+                      <h4>54,302</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Page Speed Score</td>
+                    <td class="text-right">
+                      <h4>87</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Citation Flow</td>
+                    <td class="text-right">
+                      <h4>987</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Mozrank</td>
+                    <td class="text-right">
+                      <h4>9.43</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Domain Authority</td>
+                    <td class="text-right">
+                      <h4>455</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="analysis-rd-mg">Alexa Rank</td>
+                    <td class="text-right analysis-rd-mg">
+                      <h4>342,234</h4>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
   export default {
     head: {
       titleTemplate: 'Home | %s',
+    },
+    methods: {
+      greeting() {
+        var today = new Date();
+        var hourNow = today.getHours();
+        var greeting;
+
+        if (hourNow > 18) {
+          greeting = 'Good evening!';
+        } else if (hourNow > 12) {
+          greeting = 'Good afternoon!';
+        } else if (hourNow > 0) {
+          greeting = 'Good morning!';
+        } else {
+          greeting = 'Welcome!';
+        }
+        return greeting
+      }
     }
   }
 </script>
+<style>
+
+</style>
