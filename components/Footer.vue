@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer">
     <div class="footer-copyright-area">
       <div class="container">
         <div class="row">
@@ -17,6 +17,14 @@
 <style>
   .company:hover {
     color: #0056b3
+  }
+
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
   }
 </style>
 
