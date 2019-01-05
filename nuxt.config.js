@@ -166,7 +166,7 @@ module.exports = {
       {src: '/js/data-table/jquery.dataTables.min.js', body: true},
       {src: '/js/data-table/data-table-act.js', body: true},
       {src: '/js/main.js', body: true},
-      {src: '/js/tawk-chat.js', body: true},
+      // {src: '/js/tawk-chat.js', body: true},
       // { src: '/defer.js', defer: '' }
     ]
   },
