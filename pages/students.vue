@@ -10,7 +10,7 @@
                 <h2>Students List</h2>
               </div>
               <div class="table-responsive">
-                <b-table id="data-table-basic" striped hover :fields="fields" :items="students"></b-table>
+                <b-table id="data-table-basic" striped hover :items="students"></b-table>
                 <table id="data-table-basic" class="table table-striped">
                   <thead>
                   <tr>
@@ -57,16 +57,17 @@
   export default {
     data() {
       return {
-        fields: ['pic', {
-          label: 'Full Name',
-          key: 'name',
-          sortable: true
-        }, {
-          label: 'Phone Number',
-          key: 'phone_number',
-        }, 'address', 'email'],
+        // fields: ['pic', {
+        //   label: 'Full Name',
+        //   key: 'name',
+        //   sortable: true
+        // }, {
+        //   label: 'Phone Number',
+        //   key: 'phone_number',
+        // }, 'address', 'email'],
       }
     },
+    // middleware: 'authenticated',
     async asyncData({$axios}) {
       const students = await $axios.$get('/students/')
       if (students) {

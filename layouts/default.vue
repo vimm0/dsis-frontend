@@ -13,51 +13,13 @@
     components: {
       'nav-bar': Navbar,
       'foot-er': Footer,
+    },
+    middleware: 'authenticated',
+    beforeCreate() {
+      this.$store.commit('initialiseStore');
     }
   }
 </script>
 <style>
-  /*html {*/
-  /*font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',*/
-  /*Roboto, 'Helvetica Neue', Arial, sans-serif;*/
-  /*font-size: 16px;*/
-  /*word-spacing: 1px;*/
-  /*-ms-text-size-adjust: 100%;*/
-  /*-webkit-text-size-adjust: 100%;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*box-sizing: border-box;*/
-  /*}*/
 
-  /**,*/
-  /**:before,*/
-  /**:after {*/
-  /*box-sizing: border-box;*/
-  /*margin: 0;*/
-  /*}*/
-
-  /*.bg-info {*/
-  /*background-color: #00c292 !important;*/
-  /*}*/
-
-  /*a.navbar-brand {*/
-  /*color: rgba(255, 255, 255, 0.96) !important;*/
-  /*}*/
-
-  /*a:hover {*/
-  /*color: rgba(255, 255, 255, 0.75);*/
-  /*text-decoration: none !important;*/
-  /*}*/
-
-  /*.custom-nav {*/
-  /*color: rgba(255, 255, 255, 0.96);*/
-  /*background-color: transparent;*/
-  /*}*/
-
-  /*.table {*/
-  /*width: 100%;*/
-  /*margin-bottom: 1rem;*/
-  /*background-color: transparent;*/
-  /*border: 1px solid #eceef1;*/
-  /*}*/
 </style>
