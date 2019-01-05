@@ -115,6 +115,11 @@ module.exports = {
         href: '/js/vendor/modernizr-2.8.3.min.js',
         as: 'style',
         onload: "this.onload=null;this.rel='stylesheet'"
+      },{
+        rel: 'preload',
+        href: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css',
+        as: 'style',
+        onload: "this.onload=null;this.rel='stylesheet'"
       }
     ],
     noscript: [
@@ -136,9 +141,13 @@ module.exports = {
       {rel: "stylesheet", href: '/style.css'},
       {rel: "stylesheet", href: '/css/responsive.css'},
       {rel: "stylesheet", href: '/js/vendor/modernizr-2.8.3.min.js'},
+      {rel: "stylesheet", href: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css'},
     ],
     script: [
       //https://stackoverflow.com/questions/50138074/how-to-append-js-files-in-nuxt-before-body-ends
+      {src: '//d3js.org/d3.v3.min.js', body: true},
+      {src: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.min.js', body: true},
+      {src: '/js/custom.js', body: true},
       {src: '/js/vendor/jquery-1.12.4.min.js', body: true},
       {src: '/js/bootstrap.min.js', body: true},
       {src: '/js/wow.min.js', body: true},
@@ -186,6 +195,7 @@ module.exports = {
   */
   plugins: [
     // '~/plugins/axios'
+    '~/plugins/vendor'
   ],
   /*
   ** Nuxt.js modules
