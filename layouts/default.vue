@@ -21,10 +21,10 @@
       'sub-nav': Menu,
       'foot-er': Footer,
     },
-    middleware: 'authenticated',
-    beforeCreate() {
-      this.$store.commit('initialiseStore');
-    }
+    // middleware: 'authenticated',
+    // beforeCreate() {
+    //   this.$store.commit('initialiseStore');
+    // }
   }
 </script>
 <style>

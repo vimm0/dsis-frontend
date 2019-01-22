@@ -115,7 +115,8 @@ module.exports = {
         href: '/js/vendor/modernizr-2.8.3.min.js',
         as: 'style',
         onload: "this.onload=null;this.rel='stylesheet'"
-      },{
+      },
+      {
         rel: 'preload',
         href: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css',
         as: 'style',
