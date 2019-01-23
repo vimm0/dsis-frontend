@@ -9,6 +9,9 @@
               <div class="data-table-list">
                 <div class="basic-tb-hd">
                   <h2>Journal Vouchers</h2>
+                  <!--<input v-model="searchKey" class="form-control" id="search-element" requred/>-->
+                  <!--<i class="fa fa-search"></i>-->
+                  <!--<i class="fa fa-ban"></i>-->
                 </div>
                 <div class="table-responsive">
                   <b-table striped hover :fields="fields" :items="journalVouchers" caption-top>
@@ -18,39 +21,22 @@
                         #{{data.item.jv_no}}
                       </nuxt-link>
                     </template>
-                    <template slot="show_details" slot-scope="row">
-                      <!-- we use @click.stop here to prevent emitting of a 'row-clicked' event  -->
-                      <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
-                        {{ row.detailsShowing ? 'Hide' : 'Show'}} Details
-                      </b-button>
-                      <!-- In some circumstances you may need to use @click.native.stop instead -->
-                      <!-- As `row.showDetails` is one-way, we call the toggleDetails function on @change -->
-                      <b-form-checkbox @click.native.stop @change="row.toggleDetails" v-model="row.detailsShowing">
-                        Details via check
-                      </b-form-checkbox>
-                    </template>
-                    <template slot="row-details" slot-scope="row">
-                      <b-card>
-                        <b-row class="mb-2">
-                          <b-col sm="3" class="text-sm-right"><b>Transactions:</b></b-col>
-                          <!--<b-col>{{ row.item.transaction_set }}</b-col>-->
-                          <li v-for="(value, key) in row.item.transaction_set" :key="key">
-                            <nuxt-link
-                              :to="{ name: 'siskaunting-transcations-id', params: { id: value.id }}">
-                              #{{value.reference}}
-                            </nuxt-link>
-
-                          </li>
-
-                        </b-row>
-                        <b-button size="sm" @click="row.toggleDetails">Hide Details</b-button>
-                      </b-card>
+                    <template slot="actions" slot-scope="row">
+                      <button type="button" class="btn btn-outline-danger"
+                              @click="$router.push({name: 'siskaunting-journalVouchers-id', params: {id:data.item.id}})">
+                        <i class="fa fa-trash-o"></i>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary"
+                              @click="$router.push({name: 'siskaunting-journalVouchers'})">
+                        <i class="fa fa-pencil"></i>
+                      </button>
                     </template>
                     <template slot="table-caption">
                       Related to Journal Vouchers
-                      <nuxt-link type="button" class="btn btn-outline-primary float-right" :to="{path: '/siskaunting/journalVouchers/create-jv'}">Create
-                        Journal Voucher
-                      </nuxt-link>
+                      <button type="button" class="btn btn-outline-success float-right"
+                              @click="$router.push({name: 'siskaunting-journalVouchers-create-jv'})">
+                        <i class="fa fa-plus-square-o"></i>
+                      </button>
                     </template>
                   </b-table>
                 </div>
@@ -67,10 +53,10 @@
     data() {
       return {
         fields: [{
-          label: 'Reference No.',
+          label: 'Reference Number',
           key: 'jv_no',
           sortable: true
-        }, 'date', 'show_details'],
+        }, 'date', 'actions'],
         selected: null,
         types: [
           'date',

@@ -7,9 +7,11 @@
 
     <b-form-input v-model="jv.description" type="text" placeholder="Description"></b-form-input>
     <button type="button" class="btn btn-outline-danger" @click="$router.push({name: 'siskaunting-journalVouchers'})">
-      Cancel
+      <i class="fa fa-times-circle-o"></i>
     </button>
-    <button type="button" class="btn btn-outline-success" @click="createObject">Create</button>
+    <button type="button" class="btn btn-outline-success" @click="createObject">
+      <i class="fa fa-check-circle-o"></i>
+    </button>
   </b-card>
 </template>
 <script>
