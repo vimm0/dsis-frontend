@@ -3,7 +3,13 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <b-card class="mb-2">
-          <b-table striped hover :fields="fields" :items="journalVouchers">
+          <b-table striped hover :fields="fields" :items="journalVouchers" caption-top>
+            <template slot="jv_no" slot-scope="data">
+              <nuxt-link
+                :to="{ name: 'siskaunting-journalVouchers-id', params: { id: data.item.id }}">
+                #{{data.item.jv_no}}
+              </nuxt-link>
+            </template>
             <template slot="show_details" slot-scope="row">
               <!-- we use @click.stop here to prevent emitting of a 'row-clicked' event  -->
               <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
@@ -20,15 +26,21 @@
                 <b-row class="mb-2">
                   <b-col sm="3" class="text-sm-right"><b>Transactions:</b></b-col>
                   <!--<b-col>{{ row.item.transaction_set }}</b-col>-->
-                  <li v-for="(value, key) in row.item.transaction_set" :key="key">{{ value.reference}}</li>
+                  <li v-for="(value, key) in row.item.transaction_set" :key="key">
+                    <nuxt-link
+                      :to="{ name: 'siskaunting-transcations-id', params: { id: value.id }}">
+                      #{{value.reference}}
+                    </nuxt-link>
+
+                  </li>
 
                 </b-row>
-                <!--<b-row class="mb-2">-->
-                <!--<b-col sm="3" class="text-sm-right"><b>Is Active:</b></b-col>-->
-                <!--<b-col>{{ row.item.isActive }}</b-col>-->
-                <!--</b-row>-->
                 <b-button size="sm" @click="row.toggleDetails">Hide Details</b-button>
               </b-card>
+            </template>
+            <template slot="table-caption">
+              Related to Journal Vouchers
+              <button type="button" class="btn btn-outline-primary float-right">Create Journal Voucher</button>
             </template>
           </b-table>
         </b-card>
@@ -59,7 +71,7 @@
     },
     async asyncData({$axios}) {
       // const accounts = await $axios.$get('/account/choices/')
-      const journalVouchers = await $axios.$get('/journal-voucher/')
+      const journalVouchers = await $axios.$get('/journal-vouchers/')
       // if (accounts) {
       //   return {accounts}
       // }
@@ -67,6 +79,7 @@
         return {journalVouchers}
       }
     },
+    methods: {},
     created() {
       // for (var i = 0; i < this.accounts.length; i++) {
       //   this.options.push({value: this.accounts[i].id, text: this.accounts[i].label})

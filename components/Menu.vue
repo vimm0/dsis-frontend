@@ -6,7 +6,8 @@
     <nuxt-link to="/levels">Levels</nuxt-link>
     <nuxt-link to="/exams">Exams</nuxt-link>
     <nuxt-link to="/attendance">Attendance</nuxt-link>
-    <nuxt-link to="/siskaunting/journalVoucher">Journal Voucher</nuxt-link>
+    <nuxt-link to="/siskaunting/journalVouchers">Journal Vouchers</nuxt-link>
+    <nuxt-link to="/siskaunting/transcations">Transactions</nuxt-link>
     <!--<div class="mobile-menu-area">-->
     <!--<div class="container">-->
     <!--<div class="row">-->
