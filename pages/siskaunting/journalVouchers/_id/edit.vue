@@ -14,8 +14,7 @@
 
   export default {
     data() {
-      return {
-      }
+      return {}
     },
     async asyncData({$axios, params}) {
       console.log(params)
