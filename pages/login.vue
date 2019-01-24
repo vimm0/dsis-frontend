@@ -12,7 +12,8 @@
           <div class="input-group mg-t-15">
             <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
             <div class="nk-int-st">
-              <input type="password" class="form-control" v-model="password" placeholder="Password">
+              <input type="password" class="form-control" v-model="password" placeholder="Password"
+                     v-on:keyup="keyPressed">
             </div>
           </div>
           <div class="fm-checkbox">
@@ -109,6 +110,11 @@
     },
     // middleware: 'authenticated',
     methods: {
+      keyPressed(e) {
+        if (e.keyCode === 13) {
+          this.userLogin()
+        }
+      },
       userLogin() {
         let postData = {
           username: this.username,
@@ -130,10 +136,12 @@
     },
     computed: {
       // mix the getters into computed with object spread operator
-      ...mapGetters([
-        'isAuthenticated',
-      ])
-    },
+      ...
+        mapGetters([
+          'isAuthenticated',
+        ])
+    }
+    ,
     beforeCreate() {
       if (this.$store.getters.isAuthenticated) {
         this.$router.push('/')

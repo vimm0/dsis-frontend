@@ -4,13 +4,13 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
       href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!--<nav-bar></nav-bar>-->
     <!--<no-ssr>-->
-    <!--<template v-if="isAuthenticated">-->
     <no-ssr>
-      <sub-nav v-if="isAuthenticated"></sub-nav>
+      <template v-if="isAuthenticated">
+        <nav-bar></nav-bar>
+        <!--<sub-nav v-if="isAuthenticated"></sub-nav>-->
+      </template>
     </no-ssr>
-    <!--</template>-->
     <!--</no-ssr>-->
     <nuxt/>
     <foot-er></foot-er>
