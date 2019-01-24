@@ -64,17 +64,10 @@
         options: [
           {value: null, text: 'Please select an option'},
         ]
-        // 'choices': [1, 2, 3, 4, 5],
-        // options: [
-        //   {value: null, text: 'Please select an option'},]
       }
     },
     async asyncData({$axios}) {
-      // const accounts = await $axios.$get('/account/choices/')
       const journalVouchers = await $axios.$get('/journal-vouchers/')
-      // if (accounts) {
-      //   return {accounts}
-      // }
       if (journalVouchers) {
         return {journalVouchers}
       }
