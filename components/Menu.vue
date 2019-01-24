@@ -8,6 +8,9 @@
     <nuxt-link to="/attendance">Attendance</nuxt-link>
     <nuxt-link to="/siskaunting/journalVouchers">Journal Vouchers</nuxt-link>
     <nuxt-link to="/siskaunting/transcations">Transactions</nuxt-link>
+    <template v-if="isAuthenticated">
+      <nuxt-link to="" @click.native="logout">Log out</nuxt-link>
+    </template>
     <!--<div class="mobile-menu-area">-->
     <!--<div class="container">-->
     <!--<div class="row">-->
@@ -284,3 +287,25 @@
     <!--</div>-->
   </div>
 </template>
+<script>
+  import {mapGetters} from 'vuex'
+
+  export default {
+    methods: {
+      logout() {
+        console.log('logout')
+        this.$store.dispatch('logout')
+        // this.$store.dispatch('logout').then(() => {
+          // this.$router.push('/login')
+        // })
+        // this.$router.push({path: '/login'})
+      }
+    },
+    computed: {
+      // mix the getters into computed with object spread operator
+      ...mapGetters([
+        'isAuthenticated',
+      ])
+    },
+  }
+</script>

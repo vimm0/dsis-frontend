@@ -97,6 +97,8 @@
 </template>
 <script>
   // http://localhost:8000/login/
+  import {mapGetters} from 'vuex'
+
   export default {
     data() {
       return {
@@ -126,11 +128,16 @@
         });
       }
     },
-    // beforeCreate() {
-    //   if(this.$store.getters.isAuthenticated){
-    //     console.log('authenticated login redirect')
-    //     this.$router.push('/')
-    //   }
-    // }
+    computed: {
+      // mix the getters into computed with object spread operator
+      ...mapGetters([
+        'isAuthenticated',
+      ])
+    },
+    beforeCreate() {
+      if (this.$store.getters.isAuthenticated) {
+        this.$router.push('/')
+      }
+    }
   }
 </script>

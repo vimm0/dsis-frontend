@@ -146,6 +146,7 @@ module.exports = {
     ],
     script: [
       //https://stackoverflow.com/questions/50138074/how-to-append-js-files-in-nuxt-before-body-ends
+      // {src: '/js/vendor/modernizr-2.8.3.min.js', body: true},
       {src: '//d3js.org/d3.v3.min.js', body: true},
       {src: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.min.js', body: true},
       {src: '/js/custom.js', body: true},

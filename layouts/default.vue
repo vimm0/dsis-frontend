@@ -5,9 +5,11 @@
       href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!--<nav-bar></nav-bar>-->
-    <template v-if="authenticated">
-      <sub-nav></sub-nav>
-    </template>
+    <no-ssr>
+      <template v-if="isAuthenticated">
+        <sub-nav></sub-nav>
+      </template>
+    </no-ssr>
     <nuxt/>
     <foot-er></foot-er>
   </div>
@@ -16,6 +18,7 @@
   import Navbar from '@/components/Navbar'
   import Menu from '@/components/Menu'
   import Footer from '@/components/Footer'
+  import {mapGetters} from 'vuex'
 
   export default {
     components: {
@@ -23,10 +26,16 @@
       'sub-nav': Menu,
       'foot-er': Footer,
     },
+    computed: {
+      // mix the getters into computed with object spread operator
+      ...mapGetters([
+        'isAuthenticated',
+      ])
+    },
     // middleware: 'authenticated',
-    beforeCreate() {
-      this.$store.commit('initialiseStore');
-    }
+    // beforeCreate() {
+    //   this.$store.commit('initialiseStore');
+    // }
   }
 </script>
 <style>
