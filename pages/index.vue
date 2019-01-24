@@ -251,74 +251,74 @@
   <!--</div>-->
 </template>
 <script>
-  import planetChartData from '@/static/js/custom.js';
-
-  export default {
-    data() {
-      return {
-        planetChartData: planetChartData,
-      }
-    },
-    head: {
-      titleTemplate: 'Home | %s',
-    },
-    methods: {
-      createChart(chartId, chartData) {
-        const ctx = document.getElementById(chartId);
-        const myChart = new Chart(ctx, {
-          type: chartData.type,
-          data: chartData.data,
-          options: chartData.options,
-        });
-      },
-      createYearlyHeatMap() {
-        var cal = new CalHeatMap();
-        cal.init({
-          itemSelector: "#cal-heatmap",
-          domain: "year",
-          subDomain: "day",
-          data: "/data/datas-years.json",
-          start: new Date(2000, 0),
-          cellSize: 10,
-          range: 1,
-          legend: [20, 40, 60, 80]
-        });
-      },
-      createMonthlyHeatMap() {
-        var cal = new CalHeatMap();
-        cal.init({
-          itemSelector: "#domain-a",
-          domain: "month",
-          subDomain: "day",
-          cellSize: 20,
-          subDomainTextFormat: "%d",
-          range: 1,
-          displayLegend: false
-        });
-      },
-      greeting() {
-        var today = new Date();
-        var hourNow = today.getHours();
-        var greeting;
-
-        if (hourNow > 18) {
-          greeting = 'Good evening!';
-        } else if (hourNow > 12) {
-          greeting = 'Good afternoon!';
-        } else if (hourNow > 0) {
-          greeting = 'Good morning!';
-        } else {
-          greeting = 'Welcome!';
-        }
-        return greeting
-      }
-    },
-    mounted() {
-      this.createChart('planet-chart', this.planetChartData);
-      this.createYearlyHeatMap();
-      this.createMonthlyHeatMap();
-    }
-  }
+  // import planetChartData from '@/static/js/custom.js';
+  //
+  // export default {
+  //   data() {
+  //     return {
+  //       planetChartData: planetChartData,
+  //     }
+  //   },
+  //   head: {
+  //     titleTemplate: 'Home | %s',
+  //   },
+  //   methods: {
+  //     createChart(chartId, chartData) {
+  //       const ctx = document.getElementById(chartId);
+  //       const myChart = new Chart(ctx, {
+  //         type: chartData.type,
+  //         data: chartData.data,
+  //         options: chartData.options,
+  //       });
+  //     },
+  //     createYearlyHeatMap() {
+  //       var cal = new CalHeatMap();
+  //       cal.init({
+  //         itemSelector: "#cal-heatmap",
+  //         domain: "year",
+  //         subDomain: "day",
+  //         data: "/data/datas-years.json",
+  //         start: new Date(2000, 0),
+  //         cellSize: 10,
+  //         range: 1,
+  //         legend: [20, 40, 60, 80]
+  //       });
+  //     },
+  //     createMonthlyHeatMap() {
+  //       var cal = new CalHeatMap();
+  //       cal.init({
+  //         itemSelector: "#domain-a",
+  //         domain: "month",
+  //         subDomain: "day",
+  //         cellSize: 20,
+  //         subDomainTextFormat: "%d",
+  //         range: 1,
+  //         displayLegend: false
+  //       });
+  //     },
+  //     greeting() {
+  //       var today = new Date();
+  //       var hourNow = today.getHours();
+  //       var greeting;
+  //
+  //       if (hourNow > 18) {
+  //         greeting = 'Good evening!';
+  //       } else if (hourNow > 12) {
+  //         greeting = 'Good afternoon!';
+  //       } else if (hourNow > 0) {
+  //         greeting = 'Good morning!';
+  //       } else {
+  //         greeting = 'Welcome!';
+  //       }
+  //       return greeting
+  //     }
+  //   },
+  //   mounted() {
+  //     this.createChart('planet-chart', this.planetChartData);
+  //     this.createYearlyHeatMap();
+  //     this.createMonthlyHeatMap();
+  //   }
+  // }
 </script>
 <style>
 

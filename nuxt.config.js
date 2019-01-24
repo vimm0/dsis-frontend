@@ -14,116 +14,116 @@ module.exports = {
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-      {
-        rel: 'preload',
-        href: '/css/font-awesome.min.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/bootstrap.min.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/owl.carousel.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/owl.theme.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/owl.transitions.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/meanmenu/meanmenu.min.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/animate.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/normalize.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/wave/waves.min.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/wave/button.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/scrollbar/jquery.mCustomScrollbar.min.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/notika-custom-icon.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/jquery.dataTables.min.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/main.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/style.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/css/responsive.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '/js/vendor/modernizr-2.8.3.min.js',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      },
-      {
-        rel: 'preload',
-        href: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css',
-        as: 'style',
-        onload: "this.onload=null;this.rel='stylesheet'"
-      }
-    ],
-    noscript: [
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/font-awesome.min.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/bootstrap.min.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/owl.carousel.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/owl.theme.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/owl.transitions.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/meanmenu/meanmenu.min.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   // {
+    //   //   rel: 'preload',
+    //   //   href: '/css/animate.css',
+    //   //   as: 'style',
+    //   //   onload: "this.onload=null;this.rel='stylesheet'"
+    //   // },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/normalize.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/wave/waves.min.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/wave/button.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/scrollbar/jquery.mCustomScrollbar.min.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/notika-custom-icon.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/jquery.dataTables.min.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/main.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/style.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/css/responsive.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '/js/vendor/modernizr-2.8.3.min.js',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   },
+    //   {
+    //     rel: 'preload',
+    //     href: '//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css',
+    //     as: 'style',
+    //     onload: "this.onload=null;this.rel='stylesheet'"
+    //   }
+    // ],
+    // noscript: [
       {rel: "stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900'},
       {rel: "stylesheet", href: '/css/bootstrap.min.css'},
       {rel: "stylesheet", href: '/css/font-awesome.min.css'},
@@ -177,8 +177,6 @@ module.exports = {
       {src: '/js/data-table/jquery.dataTables.min.js', body: true},
       {src: '/js/data-table/data-table-act.js', body: true},
       {src: '/js/main.js', body: true},
-      // {src: '/js/tawk-chat.js', body: true},
-      // { src: '/defer.js', defer: '' }
     ]
   },
 
