@@ -5,11 +5,13 @@
       href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!--<nav-bar></nav-bar>-->
+    <!--<no-ssr>-->
+    <!--<template v-if="isAuthenticated">-->
     <no-ssr>
-      <template v-if="isAuthenticated">
-        <sub-nav></sub-nav>
-      </template>
+      <sub-nav v-if="isAuthenticated"></sub-nav>
     </no-ssr>
+    <!--</template>-->
+    <!--</no-ssr>-->
     <nuxt/>
     <foot-er></foot-er>
   </div>
@@ -32,10 +34,9 @@
         'isAuthenticated',
       ])
     },
-    // middleware: 'authenticated',
-    // beforeCreate() {
-    //   this.$store.commit('initialiseStore');
-    // }
+    beforeCreate() {
+      this.$store.commit('initialiseStore');
+    }
   }
 </script>
 <style>

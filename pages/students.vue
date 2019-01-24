@@ -70,7 +70,6 @@
     },
     // /subjects/?level__name=Class+One&name= //by level_name
     // /subjects/?level__name=&name=Science //by subject_name
-    // middleware: 'authenticated',
     async asyncData({$axios}) {
       const students = await $axios.$get('/students/')
       if (students) {
