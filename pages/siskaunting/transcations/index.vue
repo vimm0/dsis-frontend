@@ -18,35 +18,22 @@
                         :to="{ name: 'siskaunting-transcations-reference', params: { reference: data.item.reference }}">
                         #{{data.item.reference}}
                       </nuxt-link>
-
-
                     </template>
-                    <template slot="show_details" slot-scope="row">
-                      <!-- we use @click.stop here to prevent emitting of a 'row-clicked' event  -->
-                      <b-button size="sm" @click.stop="row.toggleDetails" class="mr-2">
-                        {{ row.detailsShowing ? 'Hide' : 'Show'}} Details
-                      </b-button>
-                      <!-- In some circumstances you may need to use @click.native.stop instead -->
-                      <!-- As `row.showDetails` is one-way, we call the toggleDetails function on @change -->
-                      <b-form-checkbox @click.native.stop @change="row.toggleDetails" v-model="row.detailsShowing">
-                        Details via check
-                      </b-form-checkbox>
-                    </template>
-                    <template slot="row-details" slot-scope="row">
-                      <b-card>
-                        <b-row class="mb-2">
-                          <b-col sm="3" class="text-sm-right"><b>Account:</b></b-col>
-                          <!--<b-col>{{ row.item }}</b-col>-->
-                          <li v-for="(value, key) in row.item.transactionentry_set" :key="key">
-                            <a>{{ value.account.name}}</a>
-                          </li>
-                        </b-row>
-                        <b-button size="sm" @click="row.toggleDetails">Hide Details</b-button>
-                      </b-card>
+                    <template slot="actions" slot-scope="row">
+                      <button type="button" class="btn btn-outline-danger"
+                              @click="$router.push({name: 'siskaunting-journalVouchers-id', params: {id:data.item.id}})">
+                        <i class="fa fa-trash-o"></i>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary"
+                              @click="$router.push({name: 'siskaunting-journalVouchers'})">
+                        <i class="fa fa-pencil"></i>
+                      </button>
                     </template>
                     <template slot="table-caption">
                       Related to Transactions
-                      <button type="button" class="btn btn-outline-primary float-right">Create Transaction</button>
+                      <button type="button" class="btn btn-outline-primary float-right">
+                        <i class="fa fa-plus-square-o"></i>
+                      </button>
                     </template>
                   </b-table>
                 </div>
@@ -70,7 +57,7 @@
         }, 'date', 'description', {
           label: 'Created',
           key: 'created_at'
-        }, 'show_details'],
+        }, 'actions'],
 
       }
     },

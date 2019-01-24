@@ -5,7 +5,9 @@
       href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!--<nav-bar></nav-bar>-->
-    <sub-nav></sub-nav>
+    <template v-if="authenticated">
+      <sub-nav></sub-nav>
+    </template>
     <nuxt/>
     <foot-er></foot-er>
   </div>
@@ -22,9 +24,9 @@
       'foot-er': Footer,
     },
     // middleware: 'authenticated',
-    // beforeCreate() {
-    //   this.$store.commit('initialiseStore');
-    // }
+    beforeCreate() {
+      this.$store.commit('initialiseStore');
+    }
   }
 </script>
 <style>

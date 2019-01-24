@@ -17,7 +17,7 @@
                   <b-table striped hover :fields="fields" :items="journalVouchers" caption-top>
                     <template slot="jv_no" slot-scope="data">
                       <nuxt-link
-                        :to="{ name: 'siskaunting-journalVouchers-id', params: { id: data.item.id }}">
+                        :to="{ name: 'siskaunting-journalVouchers-id-edit', params: { id: data.item.id }}">
                         #{{data.item.jv_no}}
                       </nuxt-link>
                     </template>

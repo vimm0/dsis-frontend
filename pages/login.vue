@@ -126,11 +126,11 @@
         });
       }
     },
-    beforeCreate() {
-      if(this.$store.getters.isAuthenticated){
-        console.log('authenticated login redirect')
-        this.$router.push('/')
-      }
-    }
+    // beforeCreate() {
+    //   if(this.$store.getters.isAuthenticated){
+    //     console.log('authenticated login redirect')
+    //     this.$router.push('/')
+    //   }
+    // }
   }
 </script>

@@ -9,7 +9,6 @@ const createStore = () => {
     },
     mutations: {
       initialiseStore(state) {
-        console.log()
         if (!process.server) {
           if (localStorage.getItem('token')) {
             state.token = localStorage.getItem('token')
