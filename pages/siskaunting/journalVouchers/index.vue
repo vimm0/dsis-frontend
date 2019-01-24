@@ -23,11 +23,11 @@
                     </template>
                     <template slot="actions" slot-scope="row">
                       <button type="button" class="btn btn-outline-danger"
-                              @click="$router.push({name: 'siskaunting-journalVouchers-id', params: {id:data.item.id}})">
+                              @click="$router.push({name: 'siskaunting-journalVouchers-id', params: {id:row['item'].id}})">
                         <i class="fa fa-trash-o"></i>
                       </button>
                       <button type="button" class="btn btn-outline-primary"
-                              @click="$router.push({name: 'siskaunting-journalVouchers'})">
+                              @click="$router.push({name: 'siskaunting-journalVouchers-id-edit', params: {id:row['item'].id}})">
                         <i class="fa fa-pencil"></i>
                       </button>
                     </template>

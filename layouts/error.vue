@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="error.statusCode">
+    <template v-if="error">
       <div class="error-page-area">
         <div class="error-page-wrap">
           <i class="notika-icon notika-close"></i>
