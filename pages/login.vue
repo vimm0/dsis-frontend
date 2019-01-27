@@ -108,7 +108,6 @@
         password: '',
       }
     },
-    // middleware: 'authenticated',
     methods: {
       keyPressed(e) {
         if (e.keyCode === 13) {
@@ -140,8 +139,7 @@
         mapGetters([
           'isAuthenticated',
         ])
-    }
-    ,
+    },
     beforeCreate() {
       if (this.$store.getters.isAuthenticated) {
         this.$router.push('/')

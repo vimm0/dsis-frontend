@@ -2,6 +2,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  // mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -206,6 +207,9 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
   ],
+  router: {
+    middleware: ['authenticated']
+  },
   /*
   ** Axios module configuration
   */

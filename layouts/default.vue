@@ -1,19 +1,23 @@
 <template>
   <div>
+
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
       href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!--<no-ssr>-->
     <no-ssr>
-      <template v-if="isAuthenticated">
-        <nav-bar></nav-bar>
-        <!--<sub-nav v-if="isAuthenticated"></sub-nav>-->
-      </template>
+      <!--<template >-->
+      <nav-bar v-if="isAuthenticated"></nav-bar>
+      <!--<sub-nav v-if="isAuthenticated"></sub-nav>-->
+      <!--</template>-->
+      <!--</no-ssr>-->
+      <!--<no-ssr>-->
+
+      <nuxt/>
+
+      <foot-er></foot-er>
     </no-ssr>
-    <!--</no-ssr>-->
-    <nuxt/>
-    <foot-er></foot-er>
+
   </div>
 </template>
 <script>
@@ -34,6 +38,10 @@
         'isAuthenticated',
       ])
     },
+    created() {
+      console.log('default')
+    },
+    // middleware: 'authenticated',
     beforeCreate() {
       this.$store.commit('initialiseStore');
     }

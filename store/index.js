@@ -12,6 +12,7 @@ const createStore = () => {
       initialiseStore(state) {
         if (!process.server) {
           if (localStorage.getItem('token')) {
+            console.log('initialiseStore')
             state.token = JSON.parse(localStorage.getItem('token'))
           }
         }
@@ -24,11 +25,15 @@ const createStore = () => {
       }
     },
     actions: {
+      // nuxtServerInit({commit}, {req}) {
+      //   console.log(commit)
+      //   // if (req.session.user) {
+      //   //   commit('user', req.session.user)
+      //   // }
+      // },
       logout({commit}) {
         localStorage.removeItem('token')
         commit('logout')
-        // console.log(this)
-        // $nuxt.$router.push({path: '/login'})
       }
     },
     getters: {

@@ -1,5 +1,8 @@
-export default function ({store, redirect}) {
-  if (!store.getters.isAuthenticated) {
-    return redirect('/login')
-  }
+export default function (context) {
+  // if (!process.server) {
+    if (!context.store.getters.isAuthenticated) {
+      console.log('authenticated.js')
+      return context.redirect('/login')
+    }
+  // }
 }
